@@ -10,19 +10,19 @@ export default function Issues() {
 
   function fetchIssues() {
     return fetch(
-      `https://api.github.com/repos/Laravel/Laravel/issues?per_page=10&state=${filter}`
+      `https://api.github.com/repos/facebook/create-react-app/issues?per_page=10&state=${filter}`
     ).then(response => response.json());
   }
 
   function fetchIssuesOpen() {
     return fetch(
-      `https://api.github.com/search/issues?q=repo:Laravel/Laravel+type:issue+state:open&per_page=1`
+      `https://api.github.com/search/issues?q=repo:facebook/create-react-app+type:issue+state:open&per_page=1`
     ).then(response => response.json());
   }
 
   function fetchIssuesClosed() {
     return fetch(
-      `https://api.github.com/search/issues?q=repo:Laravel/Laravel+type:issue+state:closed&per_page=1`
+      `https://api.github.com/search/issues?q=repo:facebook/create-react-app+type:issue+state:closed&per_page=1`
     ).then(response => response.json());
   }
 
@@ -49,7 +49,9 @@ export default function Issues() {
       {isSuccess && (
         <div className="issues-container">
           <div className="issues-heading">
-            <a href="https:://laravel.com">Laravel / Laravel</a>
+            <a href="https://github.com/facebook/create-react-app">
+              facebook / create-react-app
+            </a>
             <div className="open-closed-buttons">
               <button onClick={() => setFilter('open')}>
                 <IconOpen />
