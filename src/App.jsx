@@ -1,5 +1,6 @@
 import './reset.css';
 import './App.css';
+import './github-markdown.css';
 import Issues from './components/Issues';
 import Details from './components/Details';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
